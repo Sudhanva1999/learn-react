@@ -1,3 +1,18 @@
+function Avatar({person, size=100}) {
+  return (
+    <div>
+        <img
+      className="avatar"
+      src={'https://i.imgur.com/' + person.imageId + 's.jpg'}
+      alt={person.name}
+      width={size}
+      height={size}
+    />
+    <h2>{person.name}</h2>
+    </div>
+  );
+}
+
 export const people = [{
   id: 0,
   name: 'Creola Katherine Johnson',
@@ -16,8 +31,11 @@ function getImageUrl(imageId) {
     return "https://i.imgur.com/" + imageId + "s.jpg"
 }
 export default function List() {
-  const listItems = people.map(person =>
-    <li>
+  const listItems = people.map((person) =>
+    <li key ={"person_"+ person.id}>
+       <Avatar
+            person={{ name: person.name, imageId: person.imageId}}
+            size={200} />
     </li>
   );
   return <ul>{listItems}</ul>;

@@ -3,11 +3,18 @@
 // import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Profile from './components/profile'
+import ListPlain from './components/list_plain'
+import ListKeys from './components/list_keys'
+import ListQ from './qcomps/list_keys_id'
+import RecipeList from './qcomps/recipes'
+import Button from './components/button'
+import MenuBar from './qcomps/menuBar'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Profile />
+        <Button />
+        <MenuBar id = "fvsorin"/>
     </div>
   )
 }
