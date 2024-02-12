@@ -10,11 +10,12 @@ import RecipeList from './qcomps/recipes'
 import Button from './components/button'
 import StateExample from './qcomps/state'
 import StuckFunction from './qcomps/stuckForm'
+import ThankYouCrash from './qcomps/thankYouCrash'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-       <StuckFunction />
+       <ThankYouCrash />
     </div>
   )
 }
